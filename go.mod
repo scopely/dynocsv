@@ -1,4 +1,4 @@
-module github.com/zshamrock/dynocsv
+module github.com/scopely/dynocsv
 
 go 1.13
 

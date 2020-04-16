@@ -8,7 +8,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
 	"github.com/aws/aws-sdk-go/service/dynamodb/expression"
-	awssessions "github.com/zshamrock/dynocsv/aws"
+	awssessions "github.com/scopely/dynocsv/aws"
 	"io"
 	"log"
 	"sort"

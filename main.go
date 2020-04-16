@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/zshamrock/dynocsv/aws/dynamodb"
+	"github.com/scopely/dynocsv/aws/dynamodb"
 	"gopkg.in/urfave/cli.v1"
 	"log"
 	"os"
