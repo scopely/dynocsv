@@ -6,10 +6,6 @@ import (
 	"strings"
 )
 
-const (
-	profileNameEnvVar = "AWS_PROFILE"
-)
-
 type runtime int
 
 const (
@@ -28,17 +24,13 @@ const (
 func GetSession(profile string) *session.Session {
 	p := profile
 	if profile == "" {
-		p = getEnvProfileNameOrDefault()
+		return setupSessionWithoutProfile()
 	}
 	return setupSession(p)
 }
 
-func getEnvProfileNameOrDefault() string {
-	profile, ok := os.LookupEnv(profileNameEnvVar)
-	if !ok {
-		profile = session.DefaultSharedConfigProfile
-	}
-	return profile
+func setupSessionWithoutProfile() *session.Session {
+	return session.Must(session.NewSession())
 }
 
 func setupSession(profile string) *session.Session {
